@@ -1,14 +1,14 @@
-/*!
+/* !
  * Start Bootstrap - One Page Wonder v5.0.7 (https://startbootstrap.com/template-overviews/one-page-wonder)
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
  */
 
-body {
+/* body {
   font-family: "Lato";
-}
+} */
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -167,3 +167,6 @@ header.masthead .bg-circle-4 {
 h1 {
   font-size: 7rem;
 }
+p {
+  font-size: 25px;
+} */
