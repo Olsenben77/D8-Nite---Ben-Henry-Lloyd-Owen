@@ -141,3 +141,24 @@ header.masthead .bg-circle-4 {
 h1 {
   font-size: 7rem;
 }
+.girls-text {
+  font-size: 25px;
+  font-family: "Satisfy", cursive;
+}
+.boys-text {
+  font-size: 25px;
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+.girls-night-button {
+  padding-left: 0px;
+}
+.boys-night-button {
+  padding-left: 0px;
+  color: navy !important;
+}
+.masthead-content {
+  height: 150px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
