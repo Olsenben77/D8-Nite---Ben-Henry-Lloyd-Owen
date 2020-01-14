@@ -10,13 +10,19 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"
+      integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M"
+      crossorigin="anonymous"
+    />
     <link href="guys.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Date Nite || Guys Page</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Nite Owl Home🦉</a>
+        <a class="navbar-brand" href="index.html">Nite Owl Home🦉</a>
       </div>
     </nav>
 
@@ -25,6 +31,7 @@
         id="carouselExampleIndicators"
         class="carousel slide"
         data-ride="carousel"
+        data-interval="false"
       >
         <ol class="carousel-indicators">
           <li
@@ -41,9 +48,38 @@
             style="background-image: url('https://source.unsplash.com/U7HLzMO4SIY/1920x1080')"
           >
             <div class="carousel-caption d-none d-md-block">
-              <h3 class="display-4">Event</h3>
-              <p class="lead">This is a description for the first slide.</p>
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h3 class="card-title" class="display-2">Event</h3>
+                      <p class="card-text">
+                        Click the button to search for nearby events!
+                      </p>
+                      <div id="event-search">
+                      <div class="input-group flex-nowrap">
+                        <input
+                          id="search-bar"
+                          class="form-control form-control-lg"
+                          type="text"
+                          placeholder="Event Finder"
+                        />
+                      </div>
+                      <div id="event-btn">
+                        <div class="input-group-append">
+                          <button type="button" class="btn btn-primary btn-lg">
+                            <i class="fas fa-search"></i>
+                          </button>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="col-sm-3"></div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
           <div
@@ -51,9 +87,42 @@
             style="background-image: url('https://source.unsplash.com/JKMnm3CIncw/1920x1080')"
           >
             <div class="carousel-caption d-none d-md-block">
-              <h3 class="display-4">Bar</h3>
-              <p class="lead">This is a description for the second slide.</p>
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                  <div class="card">
+                      <div class="card-body">
+                        <h3 class="card-title" class="display-2">Bars</h3>
+                        <p class="card-text">
+                          Click the button to search for nearby bars!
+                        </p>
+                        <div id="bar-search">
+                        <div class="input-group flex-nowrap width=150">
+                          <input
+                            id="search-bar"
+                            class="form-control form-control-lg"
+                            type="text"
+                            placeholder="Bar Finder"
+                          />
+                        </div>
+                        <div class="input-group-append">
+                            <div id="bar-btn">
+                            <button
+                              type="button"
+                              class="btn btn-primary btn-lg"
+                            >
+                              <i class="fas fa-search"></i>
+                            </button>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="col-sm-3"></div>
           </div>
           <!-- Slide Three - Set the background image for this slide in the line below -->
         </div>
