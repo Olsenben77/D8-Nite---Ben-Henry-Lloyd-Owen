@@ -1,5 +1,5 @@
 var cityInput;
-var cityInputEnterBtn = document.getElementsByClassName("cityInput");
+var cityInputEnterBtn = document.getElementById("search-bar-city");
 
 function events() {
   cityInput = $(".cityInput")
@@ -60,6 +60,6 @@ $(".searchBtn").on("click", function() {
 cityInputEnterBtn.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
     event.preventDefault();
-    document.getElementsByClassName("searchBtn").click();
+    events();
   }
 });
