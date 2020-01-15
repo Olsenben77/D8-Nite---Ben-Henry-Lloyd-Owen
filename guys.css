@@ -17,19 +17,25 @@
 h3 {
   font-family: "Fjalla One", sans-serif;
   font-size: 40px;
+  height: inherit;
+  padding: 3% 0;
 }
 p {
   font-family: "Fjalla One", sans-serif;
   font-size: 19px;
 }
 
-.card-body {
+#event-body {
   background: #000 url("https://source.unsplash.com/U7HLzMO4SIY/1920x1080")
     center center;
+  padding-top: 13rem;
+  padding-bottom: 10rem;
 }
-.card-body1 {
+#bar-body {
   background: #000 url("https://source.unsplash.com/JKMnm3CIncw/1920x1080")
     center center;
+  padding-top: 13rem;
+  padding-bottom: 10rem;
 }
 
 .scrollbar-custom::-webkit-scrollbar-track {
