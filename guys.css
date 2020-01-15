@@ -1,14 +1,27 @@
+* {
+  box-sizing: border-box;
+}
 .carousel-item {
+ 
   height: 100vh;
-  min-height: 350px;
+  max-height: 600px !important;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+/*
 .display-4 {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+}
+*/
+
+#eventbox, #barsbox {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
 }
