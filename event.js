@@ -17,16 +17,18 @@ function events() {
     console.log(response);
     console.log(response._embedded.events.length);
 
-    var eventData = $(".eventsInfo");
+    var eventData = $(".infoList");
     eventData.empty();
 
     for (var x = 0; x < response._embedded.events.length; ++x) {
-      var eventList = $("<div>");
+      var eventListcard = $("<div>");
+      var eventListcardbox = $("<div>");
       var eventName = $("<h4>");
       var eventImg = $("<img>");
       var eventDate = $("<h5>");
       var eventTime = $("<h5>");
       var eventInfo = $("<h6>");
+      var eventPicker = $("<button>");
       var spacing = $("<hr>");
 
       eventName.text(response._embedded.events[x].name);
@@ -35,14 +37,49 @@ function events() {
       eventDate.text(response._embedded.events[x].dates.start.localDate);
       eventTime.text(response._embedded.events[x].dates.start.localTime);
       eventInfo.text(response._embedded.events[x].info);
+      eventPicker.text("Pick Event");
+      eventListcard.attr("class", "example-1 scrollbar-custom")
 
-      eventList.append(eventName, eventImg, eventDate, eventTime, eventInfo, spacing);
-      eventData.append(eventList);
-
+      eventListcardbox.append(
+        eventName,
+        eventImg,
+        eventDate,
+        eventTime,
+        eventInfo,
+        eventPicker,
+        spacing
+      );
+      eventListcard.append(eventListcardbox);
+      eventData.append(eventListcard);
     }
   });
 }
 
 $(".searchBtn").on("click", function() {
   events();
+});
+
+function removeArrowsBars() {
+  var hideNextArr = $("#next-arrow-btn");
+  var hiddenPrevArr = $("#prev-arrow-btn");
+  hideNextArr.attr("class", "hidden");
+  hiddenPrevArr.attr("class", "hidden");
+  var barsCard = $(".barsRest");
+  barsCard.remove();
+  var eventCard = $("#eventCard");
+  eventCard.removeClass("hidden");
+
+}
+
+var nextSideBtn = document.getElementById("next-side-btn");
+nextSideBtn.addEventListener("click", function() {
+  // var carouselIndic = document.getElementById("carouselIndic");
+  // console.log(carouselIndic.value);
+  // if(carouselIndic.value === 1){
+  //   console.log("1");
+  // }
+  // else{
+  //   console.log("0");
+  // }
+  removeArrowsBars();
 });
