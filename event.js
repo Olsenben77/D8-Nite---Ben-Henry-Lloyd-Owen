@@ -1,4 +1,5 @@
 var cityInput;
+var cityInputEnterBtn = document.getElementsByClassName("cityInput");
 
 function events() {
   cityInput = $(".cityInput")
@@ -27,6 +28,7 @@ function events() {
       var eventDate = $("<h5>");
       var eventTime = $("<h5>");
       var eventInfo = $("<h6>");
+      var eventPicker = $("<button>");
       var spacing = $("<hr>");
 
       eventName.text(response._embedded.events[x].name);
@@ -35,14 +37,29 @@ function events() {
       eventDate.text(response._embedded.events[x].dates.start.localDate);
       eventTime.text(response._embedded.events[x].dates.start.localTime);
       eventInfo.text(response._embedded.events[x].info);
+      eventPicker.text("Pick Event");
 
-      eventList.append(eventName, eventImg, eventDate, eventTime, eventInfo, spacing);
+      eventList.append(
+        eventName,
+        eventImg,
+        eventDate,
+        eventTime,
+        eventInfo,
+        eventPicker,
+        spacing
+      );
       eventData.append(eventList);
-
     }
   });
 }
 
 $(".searchBtn").on("click", function() {
   events();
+});
+
+cityInputEnterBtn.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementsByClassName("searchBtn").click();
+  }
 });
