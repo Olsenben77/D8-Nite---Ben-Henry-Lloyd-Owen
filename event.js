@@ -38,7 +38,6 @@ function events() {
       eventTime.text(response._embedded.events[x].dates.start.localTime);
       eventInfo.text(response._embedded.events[x].info);
       eventPicker.text("Pick Event");
-      eventListcard.attr("class", "example-1 scrollbar-custom")
 
       eventListcardbox.append(
         eventName,
@@ -68,7 +67,6 @@ function removeArrowsBars() {
   barsCard.remove();
   var eventCard = $("#eventCard");
   eventCard.removeClass("hidden");
-
 }
 
 var nextSideBtn = document.getElementById("next-side-btn");
@@ -83,3 +81,10 @@ nextSideBtn.addEventListener("click", function() {
   // }
   removeArrowsBars();
 });
+
+// cityInputEnterBtn.addEventListener("keyup", function(event) {
+//   if (event.keyCode === 13) {
+//     event.preventDefault();
+//     events();
+//   }
+// });
