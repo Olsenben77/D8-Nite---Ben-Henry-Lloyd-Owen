@@ -20,11 +20,10 @@
     </div>
   </nav>
   <header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
+      <ol class="carousel-indicators" id="carouselIndic">
+        <li data-target="#carouselExampleIndicators" value="0" data-slide-to="0" class=""></li>
+        <li data-target="#carouselExampleIndicators" value="1" data-slide-to="1"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
         <!-- Slide One - Set the background image for this slide in the line below -->
@@ -44,21 +43,21 @@
         </div>
 
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <a class="carousel-control-prev" id="prev-side-btn" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" id="prev-arrow-btn" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <a class="carousel-control-next" id="next-side-btn" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" id="next-arrow-btn" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
     </div>
   </header>
   <div class="row" id="barsbox" style="display: block">
-    <div class="col-sm-12">
+    <div class="col-sm-12 infoList">
       <br />
       <!-- First card is for handling the search parameters -->
-      <div class="card">
+      <div class="card barsRest">
         <div class="card-header">
           <strong> <i class="fa fa-list-alt"></i> Search Restaurants / Bars:</strong>
         </div>
@@ -111,6 +110,30 @@
           </form>
         </div>
       </div>
+
+      <div class="card hidden" id="eventCard">
+          <div class="card-header">
+            <strong> <i class="fa fa-list-alt"></i> Event Search:</strong>
+          </div>
+          <div class="card-body">
+            <!-- Here we create an HTML Form for handling the inputs-->
+            <form role="form">
+              <!-- Here we create the text box for capturing the search term-->
+              <div class="form-group">
+                <label for="search">City Location:</label>
+                <input type="text" class="form-control cityInput" id="city-location" />
+              </div>
+              <!-- Here we have our final submit button -->
+              <button type="submit" class="btn btn-dark searchBtn" id="run-search">
+                <i class="fa fa-search"></i> Search
+              </button>
+              <button class="btn btn-dark" id="clear-all">
+                <i class="fa fa-trash"></i> Clear Results
+              </button>
+            </form>
+          </div>
+        </div>
+
     </div>
   </div>
   <div id="rest">
@@ -127,7 +150,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  <script src="guys.js"></script>
+  <!-- <script src="guys.js"></script> -->
 
   <script src="event.js"></script>
 </body>
