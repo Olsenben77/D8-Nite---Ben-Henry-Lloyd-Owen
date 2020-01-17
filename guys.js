@@ -93,6 +93,7 @@ $(document).ready(function () {
   }//function
   $('#searchEvents').on('click', function () {
       barsbox.style.display = "none";
+      $('#top-row').remove();
   });
   $('#searchBars').on('click', function () {
       barsbox.style.display = "block";
