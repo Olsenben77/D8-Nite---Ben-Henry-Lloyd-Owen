@@ -9,15 +9,19 @@ $(document).ready(function () {
     eventDate = $("#event-date")
       .val()
       .trim();
+      var apiFormat = moment(eventDate).format("YYYY-MM-DD");
+
+console.log(apiFormat);
+
     console.log(cityInput);
     console.log(eventDate);
     var queryURL =
-      "https://app.ticketmaster.com/discovery/v2/events?apikey=CmSrewheOQ1GgmtfsovcAYtrADjZxAoI&locale=*&city=" +
-      cityInput +
-      // "%20" +
-      "&startDateTime=" +
-      eventDate +
-      "T00:00:00Z";
+    "https://app.ticketmaster.com/discovery/v2/events?apikey=CmSrewheOQ1GgmtfsovcAYtrADjZxAoI&locale=*&startDateTime=" +
+    apiFormat +
+    "T00:00:00Z&endDateTime=" +
+    apiFormat +
+    "T23:59:59Z&city=" +
+    cityInput;
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -30,11 +34,7 @@ $(document).ready(function () {
       eventData.empty();
   
       for (var x = 0; x < response._embedded.events.length; ++x) {
-        console.log(x);
-        console.log(response._embedded.events[x].name);
-        console.log(response._embedded.events[x].dates.start.localDate);
   
-        if (eventDate === response._embedded.events[x].dates.start.localDate) {
           var eventListcard = $("<div>");
           var eventListcardbox = $("<div>");
           var eventName = $("<h4>");
@@ -48,9 +48,9 @@ $(document).ready(function () {
           eventName.text(response._embedded.events[x].name);
           eventImg.attr("src", response._embedded.events[x].images[0].url);
           eventImg.attr("style", "height: 140px; width: 140px;");
-          eventDate.text(response._embedded.events[x].dates.start.localDate);
-          eventTime.text(response._embedded.events[x].dates.start.localTime);
-          eventInfo.text(response._embedded.events[x].info);
+          // eventDate.text(response._embedded.events[x].dates.start.localDate);
+          // eventTime.text(response._embedded.events[x].dates.start.localTime);
+          // eventInfo.text(response._embedded.events[x].info);
           eventPicker.text("Pick Event");
   
           eventListcardbox.append(
@@ -65,7 +65,6 @@ $(document).ready(function () {
           eventListcard.append(eventListcardbox);
           eventData.append(eventListcard);
         }
-      }
     });
   }
   
