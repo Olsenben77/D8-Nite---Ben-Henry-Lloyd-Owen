@@ -154,11 +154,23 @@ h1 {
 }
 .boys-night-button {
   padding-left: 0px;
-  color: navy !important;
 }
 .masthead-content {
   height: 150px;
   justify-content: center;
   display: flex;
   align-items: center;
+}
+.card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+marquee {
+  font-size: 40px;
 }
