@@ -5,7 +5,6 @@
  */
 body {
   font-family: Lato;
-  font-size: 2rem;
 }
 h1,
 h2,
@@ -174,29 +173,4 @@ h1 {
 }
 marquee {
   font-size: 40px;
-}
-.pb-5,
-.py-5 {
-  padding-bottom: 1rem !important;
-}
-.pt-5,
-.py-5 {
-  padding-top: 0rem !important;
-}
-div.container {
-  padding: 0px;
-}
-footer {
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.nav-link {
-  padding-left: 0px;
-}
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
