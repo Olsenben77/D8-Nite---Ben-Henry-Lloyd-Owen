@@ -26,7 +26,11 @@
       </div>
     </nav>
     <header>
-      <div id="carouselExampleIndicators" class="carousel slide">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-interval="false"
+      >
         <ol class="carousel-indicators">
           <li
             data-target="#carouselExampleIndicators"
@@ -114,16 +118,10 @@
                   <option value="5">Restaurants</option>
                 </select>
               </div>
-
               <!-- Here we capture the Start Year Parameter-->
               <div class="form-group">
                 <label for="cuisine">Cuisine (Optional):</label>
                 <input type="text" class="form-control" id="cuisine" />
-              </div>
-              <!-- Here we capture the End Year Parameter -->
-              <div class="form-group">
-                <label for="end-year">Key Word (Optional):</label>
-                <input type="text" class="form-control" id="end-year" />
               </div>
               <!-- Here we have our final submit button -->
               <button type="button" class="btn btn-info" id="run-search">
@@ -137,7 +135,40 @@
         </div>
       </div>
     </div>
-    <div class="eventsInfo">;</div>
+    <div class="row" id="test"  style="display: none">
+      <div class="col-sm-12">
+        <br />
+        <!-- First card is for handling the search parameters -->
+        <div class="card">
+          <div class="card-header">
+            <strong> <i class="fa fa-list-alt"></i> Events:</strong>
+          </div>
+          <div class="card-body">
+            <!-- Here we create an HTML Form for handling the inputs-->
+            <form role="form">
+              <!-- Here we create the text box for capturing the search term-->
+              <div class="form-group">
+                <label for="search">City Location:</label>
+                <input type="text" class="form-control" id="event-city-location" />
+              </div>
+              <!-- Here we create the text box for capturing the search term-->
+              <div class="form-group">
+                <label for="search">Date:</label>
+                <input type="text" placeholder="YYYY-MM-DD" class="form-control" id="event-date" />
+              </div>
+              <!-- Here we have our final submit button -->
+              <button type="button" class="btn btn-info" id="event-search">
+                <i class="fa fa-search"></i> Search
+              </button>
+              <button class="btn btn-info" id="clear-all">
+                <i class="fa fa-trash"></i> Clear Results
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="eventsInfo"></div>
     <!-- Page Content -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script
