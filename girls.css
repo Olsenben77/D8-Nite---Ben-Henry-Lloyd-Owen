@@ -1,6 +1,6 @@
 .carousel-item {
   height: 100vh;
-  min-height: 350px;
+  max-height: 600px !important;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -9,6 +9,6 @@
 }
 
 .carousel-caption {
-  margin-bottom: 400px;
-  margin-top: 50px;
+  color: black;
+  padding-bottom: 400px;
 }
