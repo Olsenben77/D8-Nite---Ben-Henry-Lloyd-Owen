@@ -69,19 +69,6 @@ function removeArrowsBars() {
   eventCard.removeClass("hidden");
 }
 
-var nextSideBtn = document.getElementById("next-side-btn");
-nextSideBtn.addEventListener("click", function() {
-  // var carouselIndic = document.getElementById("carouselIndic");
-  // console.log(carouselIndic.value);
-  // if(carouselIndic.value === 1){
-  //   console.log("1");
-  // }
-  // else{
-  //   console.log("0");
-  // }
-  removeArrowsBars();
-});
-
 // cityInputEnterBtn.addEventListener("keyup", function(event) {
 //   if (event.keyCode === 13) {
 //     event.preventDefault();
