@@ -1,4 +1,5 @@
-var musicInput;
+var musicInput = "Shrek";
+
 var settings = {
   async: true,
   crossDomain: true,
@@ -13,3 +14,8 @@ var settings = {
 $.ajax(settings).done(function(response) {
   console.log(response);
 });
+
+//title and artist
+// Data[0].album.cover;
+
+for (var i = 0; x < 20; ++i) {}
