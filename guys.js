@@ -1,9 +1,6 @@
-
 $(document).ready(function () {
     var location;
     var city;
-
-
     function findLocation(city, displayResults) {
         var settings = {
             "async": true,
@@ -19,32 +16,21 @@ $(document).ready(function () {
             displayResults(response.data[0].result_object.location_id);
         });
     }
-
-
     $('#run-search').on('click', function () {
         city = $('#city-location').val();
         findLocation(city, showResults);
-
     });
-  }
-  $("#run-search").on("click", function() {
-    city = $("#city-location").val();
-    findLocation(city, showResults);
-  });
-  function showResults(id) {
-    var settings = {
-      async: true,
-      crossDomain: true,
-      url:
-        "https://tripadvisor1.p.rapidapi.com/restaurants/list?lunit=mi&limit=30&prices_restaurants=10953%252C10955&restaurant_mealtype=10598%252C10599&currency=USD&lang=en_US&location_id=" +
-        id,
-      method: "GET",
-      headers: {
-        "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-        "x-rapidapi-key": "97dd672a0cmshb1e6a6f2a428472p18d34ejsn1f6efb9b89b9"
-      }
-    };
-    
+    function showResults(id) {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://tripadvisor1.p.rapidapi.com/restaurants/list?lunit=mi&limit=30&prices_restaurants=10953%252C10955&restaurant_mealtype=10598%252C10599&currency=USD&lang=en_US&location_id=" + id,
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
+                "x-rapidapi-key": "97dd672a0cmshb1e6a6f2a428472p18d34ejsn1f6efb9b89b9"
+            }
+        }
         $.ajax(settings).done(function (response) {
             console.log(response);
             var arrayData = $(".eventsInfo");
@@ -69,7 +55,6 @@ $(document).ready(function () {
                     var restAddres = $('<p class="array" />');
                     var restNum = $('<p class="array" />');
                     var link1 = $('<a></a>');
-
                     var link2 = $('<a>view info...</a>');
                     //var restWeb = $('<p id="array" />');
                     var status = $('<p id="status" />');
@@ -110,17 +95,14 @@ $(document).ready(function () {
             }//for
         });//ajax
     }//function
-
     $('#searchEvents').on('click', function () {
         barsbox.style.display = "none";
         test.style.display = "block"
         $('#top-row').remove();
     });
-
     $('#searchBars').on('click', function () {
         test.style.display = "none";
         barsbox.style.display = "block";
         barsbox.style.display = "block";
     });
 });
-

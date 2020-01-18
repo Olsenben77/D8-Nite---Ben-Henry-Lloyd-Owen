@@ -8,21 +8,17 @@
   -o-background-size: cover;
   background-size: cover;
 }
-
 .carousel-caption {
   color: white;
-
-
-
+ 
+}
 h3 {
   font-weight: 500;
 }
-
 .card-header, #running-search, #clearly-all {
-  background-color: #ffc107;
+  background-color: #FFC107;
   color: white;
 }
-
 #winebox {
   width: 100%;
   padding-left: 40px;
