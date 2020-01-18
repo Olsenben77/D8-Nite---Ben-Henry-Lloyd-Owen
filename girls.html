@@ -27,8 +27,8 @@
         <!-- Slide One - Set the background image for this slide in the line below -->
         <div class="carousel-item active" style="background-image: url('./img/music.jpg')">
           <div class="carousel-caption d-none d-md-block">
-            <h3 class="display-4">Playlist</h3>
-            <p class="lead">Create your own rockin' playlist!</p>
+            <h3 class="display-4" id="border-font">Playlist</h3>
+            <p class="lead" id="border-font">Create your own rockin' playlist!</p>
             <button type="button" class="btn btn-warning" id="searchList">
               <i class="fa fa-search"></i> Search Playlist
             </button>
@@ -37,8 +37,8 @@
         <!-- Slide Two - Set the background image for this slide in the line below -->
         <div class="carousel-item" style="background-image: url('https://source.unsplash.com/N_Y88TWmGwA/1920x1080')">
           <div class="carousel-caption d-none d-md-block">
-            <h3 class="display-4">Wine and Dine</h3>
-            <p class="lead">Wine. Food. This is what Fridays are for.</p>
+            <h3 class="display-4" id="border-font">Wine and Dine</h3>
+            <p class="lead" id="border-font">Wine. Food. This is what Fridays are for.</p>
             <button type="button" class="btn btn-warning" id="searchWine">
               <i class="fa fa-search"></i> Wine & Dine
             </button>
@@ -76,9 +76,9 @@
             <div class="form-group">
               <label for="pwd">Category:</label>
               <select id="category" class="custom-select" aria-labelledby="dropdownMenuButton">
-                <option selected value="1" selected>Bars/ Pubs</option>
+                  <option value="2">Bars</option>
                 <!-- Setting the option for 5 as default -->
-                <option value="5">Restaurants</option>
+                <option selected value="1" selected>Restaurants</option>
               </select>
             </div>
             <!-- Here we have our final submit button -->
@@ -93,6 +93,36 @@
       </div>
     </div>
   </div>
+
+  <div class="row" id="test"  style="display: none">
+    <div class="col-sm-12">
+      <br />
+      <!-- First card is for handling the search parameters -->
+      <div class="card">
+        <div class="card-header">
+          <strong> <i class="fa fa-list-alt"></i> Nite Jams:</strong>
+        </div>
+        <div class="card-body">
+          <!-- Here we create an HTML Form for handling the inputs-->
+          <form role="form">
+            <!-- Here we create the text box for capturing the search term-->
+            <div class="form-group">
+              <label for="search">Music Search:</label>
+              <input type="text" class="form-control" id="musicSearch" />
+            </div>
+            <!-- Here we have our final submit button -->
+            <button type="button" class="btn btn-info" id="music-search">
+              <i class="fa fa-search"></i> Search
+            </button>
+            <button class="btn btn-info" id="clear-all-music-info">
+              <i class="fa fa-trash"></i> Clear Results
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="infoDiv"></div>
   <!-- Page Content -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -101,6 +131,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+    <script src="music.js"></script>
   <script src="girls.js"></script>
 </body>
 </html>

@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 .carousel-item {
- 
   height: 100vh;
   max-height: 600px !important;
   background: no-repeat center center scroll;
@@ -26,27 +25,21 @@ p {
   font-family: "Fjalla One", sans-serif;
   font-size: 19px;
 }
-#array {
-  
+.array {
   font-size: small;
 }
 .card-header {
-  background-color: #17A2B8;
+  background-color: #17a2b8;
   color: white;
 }
 .eventsInfo {
   padding: 30px;
- 
 }
 #photo {
-  
-  
   border: 3px solid white;
 }
 #box {
   padding: 20px;
- 
-  
 }
 #colm {
   padding: 10px;
@@ -55,22 +48,24 @@ p {
 #colm2 {
   padding: 10px;
   position: center;
-  margin-left: -30px;
+  margin-left: -10px;
 }
 #status {
-  color: #17A2B8;
+  color: #17a2b8;
   font: bolder;
 }
 #top-row {
   width: 100%;
-  position: center;
+  justify-content: space-evenly;
+  padding-left: 40px;
 }
-#eventbox, #barsbox {
+#eventbox,
+#barsbox {
   width: 100%;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 10px;
 }
-.resultBtn{
+.resultBtn {
   margin-left: 10px;
 }
