@@ -10,5 +10,21 @@
 
 .carousel-caption {
   color: black;
-  padding-bottom: 400px;
+  padding-bottom: 375px;
+}
+.bg-info {
+  background-color: #ee0979 !important;
+}
+.btn-info {
+  background-color: #ee0979;
+  border-color: #ee0979;
+}
+.btn-info:active,
+.btn-info:focus,
+.btn-info:hover {
+  background-color: #bd0760 !important;
+  border-color: #bd0760 !important;
+}
+.btn-info:focus {
+  box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
 }
