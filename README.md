@@ -16,16 +16,16 @@
 ## Application Interface
 
 When the user arrives to Nite Owl they will choose their from two options. Weather they are having a guys night or girls night or they can choose what intrest them.
-![Home](img\indexhtml.png)
+![Home](img/indexhtml.png)
 
 If the user so chooses to decide on guys night, they would then pick an event for either the day of or in the furture.
-![Event](img\guysevent.png)
+![Event](img/guysevent.png)
 
 Once an event is chosen then they will be selecting from a bar, pub, and/or restaurant of their choice.
-![Pub](img\guyspub.png)
+![Pub](img/guyspub.png)
 
 Now on the Girls night side, the user will select the restaurant and bar.
-![Dinner](img\girlsdinner.png)
+![Dinner](img/girlsdinner.png)
 ## User Story
 
 AS AN adventurous and fun loving user
