@@ -16,13 +16,13 @@
 ## Application Interface
 
 When the user arrives to Nite Owl they will choose their from two options. Weather they are having a guys night or girls night or they can choose what intrest them.
-![image](Project-1\D8-Nite---Ben-Henry-Lloyd-Owen\img\indexhtml.png)
+![image](img\indexhtml.png)
 
 If the user so chooses to decide on guys night, they would then pick an event for either the day of or in the furture.
-![image](Project-1\D8-Nite---Ben-Henry-Lloyd-Owen\img\guysevent.png)
+![image](img/guysevent.png)
 
 Once an event is chosen then they will be selecting from a bar, pub, and/or restaurant of their choice.
-![image](Project-1\D8-Nite---Ben-Henry-Lloyd-Owen\img\guyspub.png)
+![image](img\guyspub.png)
 
 
 ## User Story
