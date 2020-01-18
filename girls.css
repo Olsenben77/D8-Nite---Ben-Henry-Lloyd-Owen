@@ -1,4 +1,5 @@
 .carousel-item {
+ 
   height: 100vh;
   max-height: 600px !important;
   background: no-repeat center center scroll;
@@ -9,6 +10,22 @@
 }
 
 .carousel-caption {
-  color: black;
-  padding-bottom: 400px;
+  color: white;
+ 
+}
+
+h3 {
+  font-weight: 500;
+}
+
+.card-header, #running-search, #clearly-all {
+  background-color: #ffc107;
+  color: white;
+}
+
+#winebox {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
 }

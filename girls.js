@@ -1,3 +1,15 @@
+$('#searchList').on('click', function () {
+  winebox.style.display = "none";
+
+  //$('#top-row').remove();
+});
+
+$('#searchWine').on('click', function () {
+
+  winebox.style.display = "block";
+
+});
+
 var musicInput = "Shrek";
 
 var settings = {
@@ -11,11 +23,11 @@ var settings = {
   }
 };
 
-$.ajax(settings).done(function(response) {
+$.ajax(settings).done(function (response) {
   console.log(response);
 });
 
 //title and artist
 // Data[0].album.cover;
 
-for (var i = 0; x < 20; ++i) {}
+

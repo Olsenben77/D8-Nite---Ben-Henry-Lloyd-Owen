@@ -1,6 +1,8 @@
 $(document).ready(function () {
     var location;
     var city;
+
+
     function findLocation(city, displayResults) {
         var settings = {
             "async": true,
@@ -16,6 +18,8 @@ $(document).ready(function () {
             displayResults(response.data[0].result_object.location_id);
         });
     }
+
+
     $('#run-search').on('click', function () {
         city = $('#city-location').val();
         findLocation(city, showResults);
@@ -50,12 +54,13 @@ $(document).ready(function () {
                     var insideCol2 = $('<div class="col-md-7" />');
                     var restaurantList = $('<div class="row" id="box">');
                     var restImg = $('<img id="photo" width="150" height="150" />');
-                    //var space = $('<br>');
                     var restName = $('<h5 />');
-                    var restRating = $('<p id="array"><br>');
-                    var restAddres = $('<p id="array" />');
-                    var restNum = $('<p id="array" />');
-                    var link1 = $('<a>Website |</a>');
+                    var restRating = $('<p class="array"><br>');
+                    var restAddres = $('<p class="array" />');
+                    var restNum = $('<p class="array" />');
+                    var link1 = $('<a></a>');
+
+                    var link2 = $('<a>view info...</a>');
                     //var restWeb = $('<p id="array" />');
                     var status = $('<p id="status" />');
                     var cus = $('<p id="array" />');
@@ -71,6 +76,7 @@ $(document).ready(function () {
                     //restWeb.appendTo(col2);
                     status.appendTo(col2);
                     link1.appendTo(col2);
+                    link2.appendTo(col2);
                     insideCol.appendTo(restaurantList);
                     insideCol2.appendTo(restaurantList);
                     status.appendTo(insideCol);
@@ -78,10 +84,13 @@ $(document).ready(function () {
                     restName.text(response.data[i].name);
                     restRating.text('Rating: ' + response.data[i].rating + ' | ' + response.data[i].price_level);
                     restNum.text('Phone : ' + response.data[i].phone);
-                    restAddres.text(response.data[i].address_obj.street1 + ' ' + response.data[i].address_obj.city + ' ' + response.data[i].address_obj.state);
+                    restAddres.text(response.data[i].address_obj.street1 + ' ' + response.data[i].address_obj.city);
                     var web = response.data[i].website;
+                    var web2 = response.data[i].web_url;
                     //restWeb.text('Website |');
-                    link1.attr("href", web);
+                    link1.attr("href", web)
+                    link1.text('Website | ');
+                    link2.attr("href", web2);
                     //if the restaurant is open the text is blue, when it is close the text will be red
                     console.log(response.data[i].open_now_text === 'Open Now');
                     status.text(response.data[i].open_now_text);
@@ -91,11 +100,13 @@ $(document).ready(function () {
             }//for
         });//ajax
     }//function
+
     $('#searchEvents').on('click', function () {
         barsbox.style.display = "none";
         test.style.display = "block"
         $('#top-row').remove();
     });
+
     $('#searchBars').on('click', function () {
         test.style.display = "none";
         barsbox.style.display = "block";
