@@ -13,6 +13,88 @@
     <link href="girls.css" rel="stylesheet" />
     <title>Document</title>
   </head>
+  <div class="row" id="barsbox" style="display: none">
+      <div class="col-sm-12">
+        <br />
+        <!-- First card is for handling the search parameters -->
+        <div class="card">
+          <div class="card-header">
+            <strong>
+              <i class="fa fa-list-alt"></i> Search Restaurants / Bars:</strong
+            >
+          </div>
+          <div class="card-body">
+            <!-- Here we create an HTML Form for handling the inputs-->
+            <form role="form">
+              <!-- Here we create the text box for capturing the search term-->
+              <div class="form-group">
+                <label for="search">City Location:</label>
+                <input type="text" class="form-control" id="city-location" />
+              </div>
+              <!-- Here we capture the number of records that the user wants to retrieve  -->
+              <div class="form-group">
+                <label for="pwd">Category:</label>
+                <select
+                  id="category"
+                  class="custom-select"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <option selected value="1" selected>Bars/ Pubs</option>
+                  <!-- Setting the option for 5 as default -->
+                  <option value="5">Restaurants</option>
+                </select>
+              </div>
+              <!-- Here we capture the Start Year Parameter-->
+              <div class="form-group">
+                <label for="cuisine">Cuisine (Optional):</label>
+                <input type="text" class="form-control" id="cuisine" />
+              </div>
+              <!-- Here we have our final submit button -->
+              <button type="button" class="btn btn-info" id="run-search">
+                <i class="fa fa-search"></i> Search
+              </button>
+              <button class="btn btn-info" id="clear-all">
+                <i class="fa fa-trash"></i> Clear Results
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="test"  style="display: none">
+      <div class="col-sm-12">
+        <br />
+        <!-- First card is for handling the search parameters -->
+        <div class="card">
+          <div class="card-header">
+            <strong> <i class="fa fa-list-alt"></i> Events:</strong>
+          </div>
+          <div class="card-body">
+            <!-- Here we create an HTML Form for handling the inputs-->
+            <form role="form">
+              <!-- Here we create the text box for capturing the search term-->
+              <div class="form-group">
+                <label for="search">City Location:</label>
+                <input type="text" class="form-control" id="event-city-location" />
+              </div>
+              <!-- Here we create the text box for capturing the search term-->
+              <div class="form-group">
+                <label for="search">Date:</label>
+                <input type="text" placeholder="YYYY-MM-DD" class="form-control" id="event-date" />
+              </div>
+              <!-- Here we have our final submit button -->
+              <button type="button" class="btn btn-info" id="event-search">
+                <i class="fa fa-search"></i> Search
+              </button>
+              <button class="btn btn-info" id="clear-all-event-info">
+                <i class="fa fa-trash"></i> Clear Results
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="eventsInfo"></div>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">

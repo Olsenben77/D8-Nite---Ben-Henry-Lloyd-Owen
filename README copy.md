@@ -1,24 +1,3 @@
-# Project-1---Ben-Henry-Lloyd-Owen
-
-As a romantic user
-I want a reliable web application
-so that I can have an exciting, hassle-free date night with my significant other.
-
-Project Description
-This application searches local restaurants by user selected categories such as location and reviews. Next, user may select from upcoming free or paid events to add. Finally, user has the option to share D8 Nite experience to a social media platform such as Facebook, Instagram, etc.
-
-Possible carousel - two sections
-
-Pseudo Code -
-3 HTML Files - Basic Info w/ Button
-
-- Guys & Girls Night Out
-
-JS Function()- INFO + Ajax
-
-Girls - Restaurant / Event / Movie
-
-Guys - Bars / Event
 ubusercontent.com/BlackrockDigital/startbootstrap-one-page-wonder/master/LICENSE)
 [![npm version](https://img.shields.io/npm/v/startbootstrap-one-page-wonder.svg)](https://www.npmjs.com/package/startbootstrap-one-page-wonder)
 [![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-one-page-wonder.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-one-page-wonder)
@@ -28,10 +7,11 @@ ubusercontent.com/BlackrockDigital/startbootstrap-one-page-wonder/master/LICENSE
 ## Download and Installation
 
 To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/one-page-wonder/)
-* Install via npm: `npm i startbootstrap-one-page-wonder`
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-one-page-wonder.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-one-page-wonder)
+
+- [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/one-page-wonder/)
+- Install via npm: `npm i startbootstrap-one-page-wonder`
+- Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-one-page-wonder.git`
+- [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-one-page-wonder)
 
 ## Usage
 
@@ -61,14 +41,14 @@ Have a bug or an issue with this template? [Open a new issue](https://github.com
 
 Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
+- https://startbootstrap.com
+- https://twitter.com/SBootstrap
 
 Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
 
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+- http://davidmiller.io
+- https://twitter.com/davidmillerskt
+- https://github.com/davidtmiller
 
 Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
