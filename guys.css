@@ -69,12 +69,12 @@ p {
 .resultBtn {
   margin-left: 10px;
 }
-#border-font{
-  /*border white with light shadow*/
+/*#border-font{
+  border white with light shadow
   text-shadow: 
      2px  2px     rgb(0, 87, 250), 
     -1px  2px     rgb(0, 87, 250), 
      1px -1px     rgb(0, 87, 250), 
     -1px -1px     rgb(0, 87, 250),
      1px  1px 5px white;
-}
+}*/
