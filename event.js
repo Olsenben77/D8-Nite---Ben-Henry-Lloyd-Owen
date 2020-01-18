@@ -25,7 +25,7 @@ $(document).ready(function() {
       console.log(queryURL);
       console.log(response);
       console.log(response._embedded.events.length);
-
+      
       var eventData = $(".eventsInfo");
       eventData.empty();
 
@@ -36,10 +36,11 @@ $(document).ready(function() {
         var eventImg = $("<img>");
         var eventTime = $("<h5>");
         var eventVenue = $("<h5>");
+        var buttonsDiv = $("<div>");
         var eventPicker = $("<button>");
         var spacing = $("<hr>");
-        var eventlocalTime = moment(response._embedded.events[x].dates.start.localTime, 'HH:mm').format('hh:mm a');;
-
+        var eventlocalTime = moment(response._embedded.events[x].dates.start.localTime, 'HH:mm').format('hh:mm a');
+        buttonsDiv.attr("class", "moreBtns");
         eventName.text(response._embedded.events[x].name);
         eventImg.attr("src", response._embedded.events[x].images[0].url);
         eventImg.attr("style", "height: 140px; width: 140px;");
@@ -52,14 +53,18 @@ $(document).ready(function() {
         eventPicker.attr("event-venue", response._embedded.events[x]._embedded.venues[0].name);
         eventPicker.attr("event-time", eventlocalTime);
 
+
         eventListcardbox.append(
           eventName,
           eventImg,
           eventVenue,
           eventTime,
           eventPicker,
+          buttonsDiv,
           spacing
         );
+        buttonsDiv.append(eventPicker);
+
         eventListcard.append(eventListcardbox);
         eventData.append(eventListcard);
       }
@@ -71,10 +76,21 @@ $(document).ready(function() {
   });
 
   $(document).on("click",".pick-this-event", function(){
-    console.log($(this).attr("event-name"));
-    console.log($(this).attr("event-img"));
-    console.log($(this).attr("event-venue"));
-    console.log($(this).attr("event-time"));
+    localStorage.removeItem("eventName");
+    localStorage.removeItem("eventImg");
+    localStorage.removeItem("eventVenue");
+    localStorage.removeItem("eventTime");
+
+    localStorage.setItem("eventName", $(this).attr("event-name"));
+    localStorage.setItem("eventImg", $(this).attr("event-img"));
+    localStorage.setItem("eventVenue", $(this).attr("event-venue"));
+    localStorage.setItem("eventTime", $(this).attr("event-time"));
+
+    var resultsPage = $("<button>");
+    resultsPage.text("Click Here To See Your Night");
+    resultsPage.attr("href", "results.html");
+    resultsPage.attr("class", "resultBtn");
+    $(this).parent().append(resultsPage);
   });
   // cityInputEnterBtn.addEventListener("keyup", function(event) {
   //   if (event.keyCode === 13) {
