@@ -39,7 +39,7 @@ $(document).ready(function() {
         var buttonsDiv = $("<div>");
         var eventPicker = $("<button>");
         var spacing = $("<hr>");
-        var eventlocalTime = moment(response._embedded.events[x].dates.start.localTime, 'HH:mm').format('hh:mm a');
+        var eventlocalTime = moment(response._embedded.events[x].dates.start.localTime, 'HH:mm').format('hh:mm a');;
         buttonsDiv.attr("class", "moreBtns");
         eventName.text(response._embedded.events[x].name);
         eventImg.attr("src", response._embedded.events[x].images[0].url);
@@ -88,10 +88,12 @@ $(document).ready(function() {
 
     var resultsPage = $("<button>");
     resultsPage.text("Click Here To See Your Night");
-    resultsPage.attr("href", "results.html");
+    resultsPage.attr("onclick", "resultPage()");
     resultsPage.attr("class", "resultBtn");
     $(this).parent().append(resultsPage);
   });
+
+
   // cityInputEnterBtn.addEventListener("keyup", function(event) {
   //   if (event.keyCode === 13) {
   //     event.preventDefault();
@@ -99,3 +101,7 @@ $(document).ready(function() {
   //   }
   // });
 });
+
+function resultPage(){
+  window.location.href = "results.html";
+}

@@ -12,6 +12,7 @@ $(document).ready(function() {
 
   nameTag.text(eventName);
   imgTag.attr("src", eventImg);
+  imgTag.attr("style", "height: 300px; width: 300px;");
   venueTag.text(eventVenue);
   timeTag.text(eventTime);
 
