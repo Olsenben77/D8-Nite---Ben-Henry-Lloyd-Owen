@@ -1,21 +1,67 @@
-# Project-1---Ben-Henry-Lloyd-Owen
+# Project-1---Ben-Henry-Lloyd-Owen ---Nite Owl🦉
 
-As a romantic user
-I want a reliable web application
-so that I can have an exciting, hassle-free date night with my significant other.
+## Table of contents
 
-Project Description
-This application searches local restaurants by user selected categories such as location and reviews. Next, user may select from upcoming free or paid events to add. Finally, user has the option to share D8 Nite experience to a social media platform such as Facebook, Instagram, etc.
+- [Application Interface](#Application-Interface)
+- [User Story](#User-Story)
+- [General Info](#General-Info)
+- [Motivation](#Motivation)
+- [Technologies](#Technologies)
+- [Future Functionality](#Future-Functionality)
+- [Summary](#Summary)
+- [Bugs and Feature Requests](#Bugs-And-Feature-Requests)
+- [Authors](#Authors)
+- [License](#License)
 
-Possible carousel - two sections
+## Application Interface
 
-Pseudo Code -
-3 HTML Files - Basic Info w/ Button
+## User Story
 
-- Guys & Girls Night Out
+AS AN adventurous and fun loving user
 
-JS Function()- INFO + Ajax
+I WANT a reliable web application
 
-Girls - Restaurant / Event / Movie
+SO THAT I can have an exciting, hassle-free night with friends.
 
-Guys - Bars / Event
+## General Info
+
+An interactive "Nite planning" application leading the user through a series of chosen activties. This projects features a main HTML hub where users are given a general overview of the application, information to begin their selected night, and links to share their experience via several social media platforms. Users are segued to next pick their individual events by date and location parameters. They are then given a final results page, highlighting their night choices. This project utilizes JavaScript and built in BootStrap functionaltiy to give the user an immersive yet seamless planning experience.
+
+## Motivation
+
+Our group brainstormed together and recognized the need for planning future events, especially in larger cities. Coding-wise our goal was to challenge ourselves with this project, including some difficult API's, advanced Bootstrap functionality, and a sleek UI. Our project showcases all ofthese motivations, giving us the opportunity to create something new to fit an individual's needs.
+
+## Technologies
+
+Project is created with:
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://www.javascript.com/)
+- [Bootstrap](https://getbootstrap.com/)
+
+## Future Functionality
+
+-Creat group chat option for interested parties
+-Save user results to Google Calendar
+-Include Weather API in connection with Events chosen
+
+## Summary
+
+- This project leads the user through an event planning application, giving them personal choices on local activities.
+
+## Bugs And Feature Requests
+
+Have a bug or a feature request? Please contact us at "olsenben1992@gmail.com"
+
+## Authors
+
+- Owen Chanthala
+- Lloyd Marcelino
+- Henry Lopez
+- Benjamin Olsen
+
+## License
+
+- Open Source
+- Created for the University of Washington Code-Boot Camp 2020: Project #1
