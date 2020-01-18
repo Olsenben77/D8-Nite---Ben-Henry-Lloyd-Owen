@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     var location;
     var city;
@@ -23,18 +24,27 @@ $(document).ready(function () {
     $('#run-search').on('click', function () {
         city = $('#city-location').val();
         findLocation(city, showResults);
+
     });
-    function showResults(id) {
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://tripadvisor1.p.rapidapi.com/restaurants/list?lunit=mi&limit=30&prices_restaurants=10953%252C10955&restaurant_mealtype=10598%252C10599&currency=USD&lang=en_US&location_id=" + id,
-            "method": "GET",
-            "headers": {
-                "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-                "x-rapidapi-key": "97dd672a0cmshb1e6a6f2a428472p18d34ejsn1f6efb9b89b9"
-            }
-        }
+  }
+  $("#run-search").on("click", function() {
+    city = $("#city-location").val();
+    findLocation(city, showResults);
+  });
+  function showResults(id) {
+    var settings = {
+      async: true,
+      crossDomain: true,
+      url:
+        "https://tripadvisor1.p.rapidapi.com/restaurants/list?lunit=mi&limit=30&prices_restaurants=10953%252C10955&restaurant_mealtype=10598%252C10599&currency=USD&lang=en_US&location_id=" +
+        id,
+      method: "GET",
+      headers: {
+        "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
+        "x-rapidapi-key": "97dd672a0cmshb1e6a6f2a428472p18d34ejsn1f6efb9b89b9"
+      }
+    };
+    
         $.ajax(settings).done(function (response) {
             console.log(response);
             var arrayData = $(".eventsInfo");
@@ -113,3 +123,4 @@ $(document).ready(function () {
         barsbox.style.display = "block";
     });
 });
+

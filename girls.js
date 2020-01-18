@@ -1,3 +1,4 @@
+
 $('#searchList').on('click', function () {
   winebox.style.display = "none";
 
@@ -29,5 +30,6 @@ $.ajax(settings).done(function (response) {
 
 //title and artist
 // Data[0].album.cover;
+
 
 
