@@ -35,7 +35,7 @@ $(document).ready(function() {
         var eventName = $("<h4>");
         var eventImg = $("<img>");
         var eventTime = $("<h5>");
-        var eventInfo = $("<h6>");
+        var eventVenue = $("<h5>");
         var eventPicker = $("<button>");
         var spacing = $("<hr>");
         var eventlocalTime = moment(response._embedded.events[x].dates.start.localTime, 'HH:mm').format('hh:mm a');;
@@ -44,14 +44,19 @@ $(document).ready(function() {
         eventImg.attr("src", response._embedded.events[x].images[0].url);
         eventImg.attr("style", "height: 140px; width: 140px;");
         eventTime.text(eventlocalTime);
-        // eventInfo.text(response._embedded.events[x].info);
+        eventVenue.text(response._embedded.events[x]._embedded.venues[0].name);
         eventPicker.text("Pick Event");
+        eventPicker.attr("class", "pick-this-event");
+        eventPicker.attr("event-name", response._embedded.events[x].name);
+        eventPicker.attr("event-img", response._embedded.events[x].images[0].url);
+        eventPicker.attr("event-venue", response._embedded.events[x]._embedded.venues[0].name);
+        eventPicker.attr("event-time", eventlocalTime);
 
         eventListcardbox.append(
           eventName,
           eventImg,
+          eventVenue,
           eventTime,
-          eventInfo,
           eventPicker,
           spacing
         );
@@ -65,6 +70,12 @@ $(document).ready(function() {
     events();
   });
 
+  $(document).on("click",".pick-this-event", function(){
+    console.log($(this).attr("event-name"));
+    console.log($(this).attr("event-img"));
+    console.log($(this).attr("event-venue"));
+    console.log($(this).attr("event-time"));
+  });
   // cityInputEnterBtn.addEventListener("keyup", function(event) {
   //   if (event.keyCode === 13) {
   //     event.preventDefault();
