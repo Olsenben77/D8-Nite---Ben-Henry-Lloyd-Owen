@@ -1,18 +1,11 @@
-
 $('#searchList').on('click', function () {
   winebox.style.display = "none";
-
   //$('#top-row').remove();
 });
-
 $('#searchWine').on('click', function () {
-
   winebox.style.display = "block";
-
 });
-
 var musicInput = "Shrek";
-
 var settings = {
   async: true,
   crossDomain: true,
@@ -23,13 +16,8 @@ var settings = {
     "x-rapidapi-key": "199f1e09a9mshdfab23e44228e4fp1b6d38jsn561dce2385d3"
   }
 };
-
 $.ajax(settings).done(function (response) {
   console.log(response);
 });
-
 //title and artist
 // Data[0].album.cover;
-
-
-
