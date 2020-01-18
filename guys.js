@@ -100,5 +100,6 @@ $(document).ready(function () {
         test.style.display = "none";
         barsbox.style.display = "block";
         barsbox.style.display = "block";
+        $(".eventsInfo").empty();
     });
 });
