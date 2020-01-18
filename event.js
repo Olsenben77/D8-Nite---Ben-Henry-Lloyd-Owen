@@ -9,7 +9,7 @@ $(document).ready(function() {
     eventDate = $("#event-date")
       .val()
       .trim();
-    var apiFormat = moment(eventDate).add(1, 'days').format("YYYY-MM-DD")
+    var apiFormat = moment(eventDate).add(1, 'days').format("YYYY-MM-DD");
 
     var queryURL =
       "https://app.ticketmaster.com/discovery/v2/events?apikey=CmSrewheOQ1GgmtfsovcAYtrADjZxAoI&locale=*&startDateTime=" +

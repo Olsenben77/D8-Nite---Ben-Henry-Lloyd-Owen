@@ -47,7 +47,10 @@
           >
             <div class="carousel-caption d-none d-md-block">
               <h3 class="display-4">Events</h3>
-              <p class="lead">This is a description for the first slide.</p>
+              <p class="lead" id="border-font">
+                Our Favorite Artist, Football, You Name It!
+              </p>
+              <p id="border-font">Click Search Events Button or Press Arrow to See Bars</p>
               <button type="button" class="btn btn-info" id="searchEvents">
                 <i class="fa fa-search"></i> Search Events
               </button>
@@ -60,7 +63,10 @@
           >
             <div class="carousel-caption d-none d-md-block">
               <h3 class="display-4">Bars, Pubs, Restaurants</h3>
-              <p class="lead">This is a description for the second slide.</p>
+              <p class="lead" id="border-font">
+                Shots! Shots! Shots! Shots!
+              </p>
+              <p id="border-font">Click Search Bars Button or Press Arrow to See Events</p>
               <button type="button" class="btn btn-info" id="searchBars">
                 <i class="fa fa-search"></i> Search Bars
               </button>
@@ -115,13 +121,8 @@
                 >
                   <option selected value="1" selected>Bars/ Pubs</option>
                   <!-- Setting the option for 5 as default -->
-                  <option value="5">Restaurants</option>
+                  <option value="2">Restaurants</option>
                 </select>
-              </div>
-              <!-- Here we capture the Start Year Parameter-->
-              <div class="form-group">
-                <label for="cuisine">Cuisine (Optional):</label>
-                <input type="text" class="form-control" id="cuisine" />
               </div>
               <!-- Here we have our final submit button -->
               <button type="button" class="btn btn-info" id="run-search">
@@ -135,7 +136,7 @@
         </div>
       </div>
     </div>
-    <div class="row" id="test"  style="display: none">
+    <div class="row" id="test" style="display: none">
       <div class="col-sm-12">
         <br />
         <!-- First card is for handling the search parameters -->
@@ -149,18 +150,27 @@
               <!-- Here we create the text box for capturing the search term-->
               <div class="form-group">
                 <label for="search">City Location:</label>
-                <input type="text" class="form-control" id="event-city-location" />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="event-city-location"
+                />
               </div>
               <!-- Here we create the text box for capturing the search term-->
               <div class="form-group">
                 <label for="search">Date:</label>
-                <input type="text" placeholder="YYYY-MM-DD" class="form-control" id="event-date" />
+                <input
+                  type="text"
+                  placeholder="YYYY-MM-DD"
+                  class="form-control"
+                  id="event-date"
+                />
               </div>
               <!-- Here we have our final submit button -->
               <button type="button" class="btn btn-info" id="event-search">
                 <i class="fa fa-search"></i> Search
               </button>
-              <button class="btn btn-info" id="clear-all-event-info">
+              <button type="button" class="btn btn-info" id="clear-all">
                 <i class="fa fa-trash"></i> Clear Results
               </button>
             </form>

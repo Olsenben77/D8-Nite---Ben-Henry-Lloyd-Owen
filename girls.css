@@ -15,7 +15,7 @@
 h3 {
   font-weight: 500;
 }
-.card-header, #running-search, #clearly-all {
+.card-header, #running-search, #clearly-all, #music-search, #clear-all-music-info {
   background-color: #FFC107;
   color: white;
 }
@@ -24,4 +24,52 @@ h3 {
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 10px;
+}
+.eventsInfo {
+  padding: 30px;
+ 
+}
+#photo {
+  
+  
+  border: 3px solid white;
+}
+#box {
+  padding: 20px;
+ 
+  
+}
+.array {
+  
+  font-size: small;
+}
+#colm {
+  padding: 10px;
+  position: center;
+}
+#colm2 {
+  padding: 10px;
+  position: center;
+  margin-left: -10px;
+}
+#status {
+  color: #FFC107;
+  font: bolder;
+}
+#top-row {
+  width: 100%;
+  justify-content: space-evenly;
+  padding-left: 40px;
+}
+#border-font{
+  /*border white with light shadow*/
+  text-shadow: 
+     2px  2px     #FFC107, 
+    -1px  2px     #FFC107, 
+     1px -1px     #FFC107, 
+    -1px -1px     #FFC107,
+     1px  1px 5px white;
+}
+.resultBtn {
+  margin-left: 10px;
 }
