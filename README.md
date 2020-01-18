@@ -26,6 +26,9 @@ Once an event is chosen then they will be selecting from a bar, pub, and/or rest
 
 Now on the Girls night side, the user will select the restaurant and bar.
 ![Dinner](img/girlsdinner.png)
+
+User can also view the current weather. The app geo-locates the user's location.
+
 ## User Story
 
 AS AN adventurous and fun loving user
