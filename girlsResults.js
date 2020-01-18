@@ -1,12 +1,12 @@
 $(document).ready(function() {
   var resultsBody = $(".results-body");
-  // var musicTag = $("<h4>");
-  // var spacing = $("<hr>");
-  // var musicTitle = localStorage.getItem("songsPicked");
+  var musicCard = $("<div>");
+  var musicCardBody = $("<div>");
   var girlsplaceTag = $("<h3>");
   var girlsplaceimgTag = $("<img>");
   var girlsplaceAddrTag = $("<h4>");
   var spacing = $("<hr>");
+  var musicarray = JSON.parse(localStorage.getItem("songsPicked"));
 
   var girlsplaceName = localStorage.getItem("girlsplaceName");
   var girlsplaceImg = localStorage.getItem("girlsplaceImg");
@@ -16,21 +16,22 @@ $(document).ready(function() {
   girlsplaceimgTag.attr("src", girlsplaceImg);
   girlsplaceimgTag.attr("style", "height: 300px; width: 300px;");
   girlsplaceAddrTag.text(girlsplaceAddress);
+  musicCard.attr("class", "card example-1 scrollbar-ripe-malinka");
+  musicCardBody.attr("class", "card-body");
 
-  resultsBody.append(
-    // nameTag,
-    // venueTag,
-    // timeTag,
-    // imgTag,
-    // spacing,
+  for (var x = 0; x < musicarray.length; ++x) {
+    var musicTag = $("<h4>");
+    console.log("for loop");
+    musicTag.text(musicarray[x]);
+    musicCardBody.append([musicTag, spacing]);
+  }
+  musicCard.append(musicCardBody);
+
+  resultsBody.append([
+    musicCard,
+    spacing,
     girlsplaceTag,
     girlsplaceAddrTag,
-    girlsplaceimgTag,
-    spacing
-  );
-
-  // for(var x = 0; musicTitle.length; ++x){
-  //     musicTag.text(musicTitle[x]);
-  //     resultsBody.append(musicTag, spacing);
-  // }
+    girlsplaceimgTag
+  ]);
 });
