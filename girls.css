@@ -1,4 +1,5 @@
 .carousel-item {
+ 
   height: 100vh;
   max-height: 600px !important;
   background: no-repeat center center scroll;
@@ -9,22 +10,22 @@
 }
 
 .carousel-caption {
-  color: black;
-  padding-bottom: 375px;
+  color: white;
+
+
+
+h3 {
+  font-weight: 500;
 }
-.bg-info {
-  background-color: #ee0979 !important;
+
+.card-header, #running-search, #clearly-all {
+  background-color: #ffc107;
+  color: white;
 }
-.btn-info {
-  background-color: #ee0979;
-  border-color: #ee0979;
-}
-.btn-info:active,
-.btn-info:focus,
-.btn-info:hover {
-  background-color: #bd0760 !important;
-  border-color: #bd0760 !important;
-}
-.btn-info:focus {
-  box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
+
+#winebox {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
 }
