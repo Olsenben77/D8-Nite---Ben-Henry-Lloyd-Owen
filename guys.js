@@ -172,11 +172,15 @@ $(document).ready(function() {
     barsbox.style.display = "none";
     test.style.display = "block";
     $("#top-row").remove();
+    var barsData = $(".eventsInfo");
+    barsData.empty();
   });
   $("#searchBars").on("click", function() {
     test.style.display = "none";
     barsbox.style.display = "block";
     barsbox.style.display = "block";
+    var eventData = $(".eventsInfo");
+    eventData.empty();
   });
 
   $(document).on("click", ".pick-this-place", function() {
