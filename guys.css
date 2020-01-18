@@ -65,52 +65,12 @@ p {
   width: 100%;
   position: center;
 }
-/*
-#event-body {
-  background: #000 url("https://source.unsplash.com/U7HLzMO4SIY/1920x1080(375 kB)
-https://source.unsplash.com/U7HLzMO4SIY/1920x1080
-")
-    center center;
-  padding-top: 13rem;
-  padding-bottom: 10rem;
-}
-#bar-body {
-  background: #000 url("https://source.unsplash.com/JKMnm3CIncw/1920x1080(221 kB)
-https://source.unsplash.com/JKMnm3CIncw/1920x1080
-")
-    center center;
-  padding-top: 13rem;
-  padding-bottom: 10rem;
-}
-.scrollbar-custom::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-.scrollbar-custom::-webkit-scrollbar {
-  width: 12px;
-}
-.scrollbar-custom::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  background-image: -webkit-linear-gradient(330deg, #0044FF 0%, #ABA4FF 100%);
-  background-image: linear-gradient(120deg, #0044FF 0%, #ABA4FF 100%);
-}
-.example-1 {
-  position: relative;
-  overflow-y: scroll;
-  height: 200px;
-}
-.card-body,
-.scrollbar-custom {
-  background: #000 url("https://source.unsplash.com/U7HLzMO4SIY/1920x1080(375 kB)
-https://source.unsplash.com/U7HLzMO4SIY/1920x1080
-")
-    center center;
-}
-*/
 #eventbox, #barsbox {
   width: 100%;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 10px;
+}
+.moreBtns{
+  margin-left: 10px;
 }
