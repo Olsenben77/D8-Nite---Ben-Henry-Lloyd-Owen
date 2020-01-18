@@ -99,8 +99,7 @@ $(document).ready(function() {
           placePicker.attr("place-name", response.data[i].name);
           placePicker.attr(
             "place-img",
-            response.data[i].photo.images.original.url
-          );
+            response.data[i].photo.images.original.url);
           placePicker.attr(
             "place-addr",
             response.data[i].address_obj.street1 +

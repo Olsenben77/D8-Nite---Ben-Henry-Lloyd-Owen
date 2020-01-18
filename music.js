@@ -46,7 +46,7 @@ function musicApi() {
       musicImg.attr("src", response.data[x].album.cover);
       musicImg.attr("style", "height: 140px; width: 140px;");
 
-      musicPicker.text("Add Song To Plqylist");
+      musicPicker.text("Add Song To Playlist");
       musicPicker.attr("class", "pick-this-music");
       musicPicker.attr("music-title", response.data[x].title);
       musicPicker.attr("music-artist", musicInput);
