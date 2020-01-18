@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   var location;
   var city;
   function findLocation(city, displayResults) {
@@ -14,7 +14,7 @@ $(document).ready(function() {
         "x-rapidapi-key": "97dd672a0cmshb1e6a6f2a428472p18d34ejsn1f6efb9b89b9"
       }
     };
-    $.ajax(settings).done(function(response) {
+    $.ajax(settings).done(function (response) {
       displayResults(response.data[0].result_object.location_id);
     });
   }
@@ -32,7 +32,7 @@ $(document).ready(function() {
       }
     };
   }
-  $("#run-search").on("click", function() {
+  $("#run-search").on("click", function () {
     city = $("#city-location").val();
     findLocation(city, showResults);
   });
@@ -65,7 +65,7 @@ $(document).ready(function() {
         }
       };
     }
-    $.ajax(settings).done(function(response) {
+    $.ajax(settings).done(function (response) {
       console.log(response);
       var arrayData = $(".eventsInfo");
       arrayData.empty();
@@ -90,23 +90,28 @@ $(document).ready(function() {
           var link1 = $("<a></a>");
           var link2 = $("<a>view info...</a>");
           var status = $('<p id="status" />');
-
           var buttonsDiv = $("<div>");
           var placePicker = $("<button>");
           placePicker.text("Pick Place");
           buttonsDiv.attr("class", "placeBtns");
           placePicker.attr("class", "pick-this-place");
           placePicker.attr("place-name", response.data[i].name);
-          placePicker.attr(
-            "place-img",
-            response.data[i].photo.images.original.url);
+          if (response.data[i].photo) {
+            placePicker.attr(
+              "place-img",
+              response.data[i].photo.images.original.url);
+          }
+          else {
+            placePicker.attr(
+              "place-img",
+              "https://www.quantabiodesign.com/wp-content/uploads/No-Photo-Available.jpg");
+          }
           placePicker.attr(
             "place-addr",
             response.data[i].address_obj.street1 +
-              " " +
-              response.data[i].address_obj.city
+            " " +
+            response.data[i].address_obj.city
           );
-
           col.appendTo(restaurantList);
           restImg.appendTo(col);
           col2.appendTo(restaurantList);
@@ -132,30 +137,29 @@ $(document).ready(function() {
           if (response.data[i].price_level) {
             restRating.text(
               "Rating: " +
-                response.data[i].rating +
-                " | " +
-                response.data[i].price_level
+              response.data[i].rating +
+              " | " +
+              response.data[i].price_level
             );
           } else {
             restRating.text(
               "Rating: " +
-                response.data[i].rating +
-                " | Reviews: " +
-                response.data[i].num_reviews
+              response.data[i].rating +
+              " | Reviews: " +
+              response.data[i].num_reviews
             );
           }
           restNum.text("Phone : " + response.data[i].phone);
           restAddres.text(
             response.data[i].address_obj.street1 +
-              " " +
-              response.data[i].address_obj.city
+            " " +
+            response.data[i].address_obj.city
           );
           var web = response.data[i].website;
           var web2 = response.data[i].web_url;
           link1.attr("href", web);
           link1.text("Website | ");
           link2.attr("href", web2);
-
           //if the restaurant is open the text is blue, when it is close the text will be red
           console.log(response.data[i].open_now_text === "Open Now");
           status.text(response.data[i].open_now_text);
@@ -167,30 +171,27 @@ $(document).ready(function() {
       } //for
     }); //ajax
   } //function
-  $("#searchEvents").on("click", function() {
+  $("#searchEvents").on("click", function () {
     barsbox.style.display = "none";
     test.style.display = "block";
     $("#top-row").remove();
     var barsData = $(".eventsInfo");
     barsData.empty();
   });
-  $("#searchBars").on("click", function() {
+  $("#searchBars").on("click", function () {
     test.style.display = "none";
     barsbox.style.display = "block";
     barsbox.style.display = "block";
     var eventData = $(".eventsInfo");
     eventData.empty();
   });
-
-  $(document).on("click", ".pick-this-place", function() {
+  $(document).on("click", ".pick-this-place", function () {
     localStorage.removeItem("placeName");
     localStorage.removeItem("placeImg");
     localStorage.removeItem("placeAddress");
-
     localStorage.setItem("placeName", $(this).attr("place-name"));
     localStorage.setItem("placeImg", $(this).attr("place-img"));
     localStorage.setItem("placeAddress", $(this).attr("place-addr"));
-
     var resultsPage = $("<button>");
     resultsPage.text("Click Here To See Your Night");
     resultsPage.attr("onclick", "resultPage()");
@@ -200,7 +201,9 @@ $(document).ready(function() {
       .append(resultsPage);
   });
 });
-
 function resultPage() {
   window.location.href = "results.html";
 }
+
+
+

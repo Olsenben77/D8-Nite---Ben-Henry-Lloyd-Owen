@@ -84,24 +84,28 @@ $(document).ready(function () {
           var link1 = $('<a></a>');
           var link2 = $('<a>view info...</a>');
           var status = $('<p id="status" />');
-
           var buttonsDiv = $("<div>");
           var placePicker = $("<button>");
           placePicker.text("Pick Place");
           buttonsDiv.attr("class", "placeBtns");
           placePicker.attr("class", "pick-this-place");
           placePicker.attr("place-name", response.data[i].name);
-          placePicker.attr(
-            "place-img",
-            response.data[i].photo.images.original.url
-          );
+          if (response.data[i].photo) {
+            placePicker.attr(
+              "place-img",
+              response.data[i].photo.images.original.url);
+          }
+          else {
+            placePicker.attr(
+              "place-img",
+              "https://www.quantabiodesign.com/wp-content/uploads/No-Photo-Available.jpg");
+          }
           placePicker.attr(
             "place-addr",
             response.data[i].address_obj.street1 +
-              " " +
-              response.data[i].address_obj.city
+            " " +
+            response.data[i].address_obj.city
           );
-
           col.appendTo(restaurantList);
           restImg.appendTo(col);
           col2.appendTo(restaurantList);
@@ -155,16 +159,13 @@ $(document).ready(function () {
     var musicData = $(".infoDiv");
     musicData.empty();
   });
-
-  $(document).on("click", ".pick-this-place", function() {
+  $(document).on("click", ".pick-this-place", function () {
     localStorage.removeItem("girlsplaceName");
     localStorage.removeItem("girlsplaceImg");
     localStorage.removeItem("girlsplaceAddress");
-
     localStorage.setItem("girlsplaceName", $(this).attr("place-name"));
     localStorage.setItem("girlsplaceImg", $(this).attr("place-img"));
     localStorage.setItem("girlsplaceAddress", $(this).attr("place-addr"));
-
     var resultsPage = $("<button>");
     resultsPage.text("Click Here To See Your Night");
     resultsPage.attr("onclick", "girlsresultPage()");
@@ -174,7 +175,6 @@ $(document).ready(function () {
       .append(resultsPage);
   });
 });
-
 function girlsresultPage() {
   window.location.href = "girlsresults.html";
 }
