@@ -83,10 +83,10 @@ $(document).on("click", ".pick-this-music", function() {
     .parent()
     .append(resultsPage);
 
-  console.log(songList);
+    localStorage.setItem("songsPicked", JSON.stringify(songList));
+    console.log(songList);
 });
 
 function girlsResultPage() {
-  localStorage.setItem("songsPicked", songList);
   window.location.href = "girlsresults.html";
 }
