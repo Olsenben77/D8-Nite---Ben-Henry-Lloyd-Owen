@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+  }
+
+body, html {
+   
+    background-color: black;
+    color: white;
+}
+
+#top-row {
+    background-image: url("image/cityB.jpg");
+    height: 50%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#location, #info {
+    color: #DA70D6;
+}
+
+
+#submitCity {
+    color: #B5509C;
+}
+
+#table {
+    padding: 20px;
+    padding-top: 30px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    background-color: #323232;
+}
+
+#rowDiv {
+    padding: 10px;
+}
+
+#place {
+    width: 100%;
+    background-color: #DA70D6;
+    color: white;
+}
+#place:hover {background-color:  black}
+
+#forecastbox {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: black;
+   
+}
