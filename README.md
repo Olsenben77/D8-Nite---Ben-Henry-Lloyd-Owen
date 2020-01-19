@@ -9,6 +9,8 @@
 - [Technologies](#Technologies)
 - [Future Functionality](#Future-Functionality)
 - [Summary](#Summary)
+- [UML](#UML)
+- [Weather](#Weather)
 - [Bugs and Feature Requests](#Bugs-And-Feature-Requests)
 - [Authors](#Authors)
 - [License](#License)
@@ -63,6 +65,14 @@ Project is created with:
 ## Summary
 
 - This project leads the user through an event planning application, giving them personal choices on local activities.
+
+## UML
+
+- ![UML](img/UML.png)
+
+## Weather
+
+-Weather API locates user's location and displays current conditions/weather.
 
 ## Bugs And Feature Requests
 
